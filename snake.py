@@ -187,10 +187,10 @@ class CustomEnv(gym.Env):
         self.img = np.zeros((500,500,3),dtype='uint8')
 
 env = CustomEnv()
-log_path = r"C:\Users\arsh0\OneDrive\Documents\SnakeML\myModel.zip"
+log_path = r"C:\Users\arsh0\OneDrive\Documents\SnakeML\myModel2.zip"
 model = PPO.load(log_path, env=env)
 #model = PPO('MlpPolicy', env, verbose = 1, tensorboard_log=log_path)
-model.learn(total_timesteps= 100000)
+model.learn(total_timesteps= 1000000)
 model.save("myModel2")
 
 #model = PPO.load(log_path, env=env)
